@@ -8,14 +8,11 @@ export default function Header() {
         🐾 PawTune
       </Link>
       <nav className="header-nav">
-        <Link to="/" className="nav-link">
-          홈
-        </Link>
         <Link to="/upload" className="nav-link">
           업로드
         </Link>
         <Link to="/result" className="nav-link">
-          결과
+          오늘의 음악
         </Link>
       </nav>
     </header>

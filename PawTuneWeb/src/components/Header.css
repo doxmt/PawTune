@@ -25,10 +25,9 @@ html {
   z-index: 100;
 }
 
-/* 로고 */
 .header-logo {
   text-decoration: none;
-  color: #ffb2b2;
+  color: black;
   font-size: 1.8rem;
   font-weight: bold;
   margin-right: 80px;
@@ -36,8 +35,10 @@ html {
 
 .header-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  padding-right: 232px;
+  gap: 80px;
   flex: 1;
 }
 
