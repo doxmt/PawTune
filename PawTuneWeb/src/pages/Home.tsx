@@ -5,7 +5,8 @@ export default function Home() {
   const navigate = useNavigate();
 
   const handleSelect = (species: string) => {
-    navigate("/upload", { state: { species } });
+    if (species === "dog") navigate("/upload-dog");
+    else if (species === "cat") navigate("/upload-cat");
   };
 
   return (
