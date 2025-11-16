@@ -5,14 +5,11 @@ export default function Header() {
   return (
     <header className="header">
       <Link to="/" className="header-logo">
-        🐾 PawTune
+        🐾 멍플리
       </Link>
       <nav className="header-nav">
-        <Link to="/upload" className="nav-link">
+        <Link to="/upload-dog" className="nav-link">
           업로드
-        </Link>
-        <Link to="/result" className="nav-link">
-          오늘의 음악
         </Link>
       </nav>
     </header>

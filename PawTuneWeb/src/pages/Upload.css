@@ -153,19 +153,18 @@
   animation: fadeIn 0.8s ease;
 }
 
-/* 감정별 색상 */
 .bar-item:nth-child(1) .bar-fill {
   background: linear-gradient(90deg, #f87171, #ef4444);
-} /* 화남 */
+}
 .bar-item:nth-child(2) .bar-fill {
   background: linear-gradient(90deg, #86efac, #4ade80);
-} /* 행복 */
+}
 .bar-item:nth-child(3) .bar-fill {
   background: linear-gradient(90deg, #facc15, #fde047);
-} /* 편안 */
+}
 .bar-item:nth-child(4) .bar-fill {
   background: linear-gradient(90deg, #60a5fa, #3b82f6);
-} /* 슬픔 */
+}
 
 @keyframes fadeIn {
   from {
@@ -176,28 +175,25 @@
   }
 }
 
-/* 감정 결과 영역 (가로 정렬 + 가운데 배치) */
 .result-inline {
   margin-top: 20px;
   margin-bottom: 35px;
   display: flex;
-  align-items: center; /* 세로 중앙 정렬 */
-  justify-content: center; /* 가로 중앙 정렬 */
-  gap: 14px; /* 텍스트 ↔ 버튼 간격 */
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
-/* 주요 감정 텍스트 */
 .result-text {
   font-size: 1.3rem;
   font-weight: 700;
   color: #333;
   margin: 0;
   position: relative;
-  top: 12px; /* 👈 텍스트를 살짝 아래로 (2~4px 정도 조정해도 됨) */
+  top: 12px;
 }
 
-/* 🎵 음악 추천받기 버튼 */
 .music-btn-inline {
   background: linear-gradient(90deg, #7be495, #56c596);
   color: white;

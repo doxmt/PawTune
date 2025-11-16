@@ -17,14 +17,12 @@ export default function Home() {
         </p>
       </div>
 
-      {/* 강아지 카드 섹션 */}
       <div className="pet-preview">
         <div className="pet-card dog" onClick={handleStart}>
           <img src="/dog.jpeg" alt="강아지" className="pet-image" />
         </div>
       </div>
 
-      {/* 시작 버튼 */}
       <button className="start-btn" onClick={handleStart}>
         지금 시작하기 🐾
       </button>

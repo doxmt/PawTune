@@ -3,9 +3,6 @@ from torchvision import transforms, models
 from PIL import Image
 import torch.nn as nn
 
-# -----------------------------
-# 모델 설정
-# -----------------------------
 NUM_CLASSES = 4
 IMG_SIZE = 299
 DEVICE = "mps" if torch.backends.mps.is_available() else (
@@ -13,9 +10,6 @@ DEVICE = "mps" if torch.backends.mps.is_available() else (
 )
 CLASSES = ["angry", "happy", "relaxed", "sad"]
 
-# -----------------------------
-# 이미지 전처리
-# -----------------------------
 transform = transforms.Compose([
     transforms.Resize((IMG_SIZE, IMG_SIZE)),
     transforms.ToTensor(),
@@ -23,9 +17,6 @@ transform = transforms.Compose([
                          [0.229, 0.224, 0.225]),
 ])
 
-# -----------------------------
-# 모델 로드
-# -----------------------------
 model = models.efficientnet_b2(weights=None)
 in_features = model.classifier[1].in_features
 model.classifier[1] = nn.Sequential(
@@ -38,10 +29,6 @@ model.load_state_dict(torch.load("emotion_highres_b2_best.pth", map_location=DEV
 model = model.to(DEVICE)
 model.eval()
 
-
-# -----------------------------
-# 예측 함수 (Flask에서 사용)
-# -----------------------------
 def predict_emotion(image):
     """이미지(PIL) 입력 → 예측 결과 문자열 반환"""
     img_tensor = transform(image).unsqueeze(0).to(DEVICE)
